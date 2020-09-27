@@ -4,6 +4,7 @@ $('.slider-for').slick({
   arrows: false,
   fade: false,
   asNavFor: '.slider-nav',
+  swipe: false,
 });
 $('.slider-nav').slick({
   slidesToShow: 3,
