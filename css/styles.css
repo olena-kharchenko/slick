@@ -1,0 +1,198 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: 'TT Norms Regular';
+  src: url('../fonts/TTNorms-Regular.eot');
+  src: url('../fonts/TTNorms-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTNorms-Regular.woff') format('woff'),
+    url('../fonts/TTNorms-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Norms Medium';
+  src: url('../fonts/TTNorms-Medium.eot');
+  src: url('../fonts/TTNorms-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTNorms-Medium.woff') format('woff'),
+    url('../fonts/TTNorms-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Общие стили */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  color: #14171a;
+
+  font-family: 'TT Norms Medium', sans-serif;
+}
+
+.container {
+  position: relative;
+  overflow-x: hidden;
+  height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 375px;
+  padding-top: 80px;
+  padding-left: 24px;
+  padding-right: 48px;
+  /* outline: 2px solid goldenrod; */
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Картинки */
+.slider-for-img {
+  width: 630px;
+}
+
+.main-image,
+.secondary-image {
+  border: 2px solid #14171a;
+}
+
+.main-image {
+  position: absolute;
+  width: 303px;
+  height: 192px;
+}
+
+.main-image-div.slick-slide {
+  position: relative;
+  margin-right: 24px;
+  margin-bottom: 8px;
+  width: 303px;
+  height: 192px;
+}
+
+.main-image-div::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  left: 100%;
+  bottom: 50%;
+
+  background-color: #000000;
+}
+
+/* Текст */
+.title-year {
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 1.67;
+  font-weight: 500;
+}
+
+.text {
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.67;
+  font-feature-settings: 'liga' off;
+}
+
+.title-happend {
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.title-happend::after {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 1px;
+  left: 238px;
+  bottom: 14px;
+
+  background-color: #e8e8e9;
+}
+
+.text-happend {
+  margin-bottom: 50px;
+}
+.wrapper-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+/* Переключатели */
+.switch {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  opacity: 0.4;
+}
+
+/* Кнопки-стрелки */
+
+button[disabled='true'] .slick-arrow-icon {
+  stroke: #f3f3f4;
+}
+
+.slick-arrow-icon {
+  fill: #ffffff;
+  stroke: #000000;
+
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:hover {
+  z-index: 10;
+}
+
+button[disabled='true']:hover {
+  z-index: -10;
+}
+
+.slick-arrow-icon:hover {
+  stroke: #0054a6;
+}
+
+.slick-arrow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.slick-dots li button,
+ul.slick-dots {
+  display: none;
+}
+
+.slider-nav {
+  display: none;
+}
+
+.slick-next.slick-arrow {
+  left: 262px;
+  top: 700px;
+}
+
+.slick-prev.slick-arrow {
+  left: 208px;
+  top: 700px;
+}
